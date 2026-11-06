@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Jun 2026 pada 01.03
+-- Waktu pembuatan: 06 Nov 2026 pada 14.27
 -- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Versi PHP: 8.2.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -22,6 +22,7 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `toko_online` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `toko_online`;
+
 
 -- --------------------------------------------------------
 
@@ -120,22 +121,7 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `user_id`, `recipient_name`, `phone_number`, `address`, `order_date`, `total_amount`, `payment_method`, `payment_detail`, `status`, `payment_proof`) VALUES
 (1, 3, NULL, NULL, NULL, '2026-05-14 07:35:24', 24999000.00, NULL, NULL, 'confirmed', NULL),
 (2, 3, NULL, NULL, NULL, '2026-05-14 07:42:54', 24999000.00, NULL, NULL, 'completed', NULL),
-(3, 3, 'dimas', '08961809701', 'munjul', '2026-05-14 08:33:36', 25000000.00, 'cod', '', 'completed', NULL),
-(4, 4, 'dimas', '08961809701', 'bandung', '2026-05-14 11:31:08', 24999000.00, 'transfer', 'BCA', 'completed', NULL),
-(5, 4, 'dimas', '08961809701', 'munjul', '2026-05-16 13:11:42', 28499000.00, 'transfer', 'BCA', 'completed', NULL),
-(6, 5, 'Customer', '14134343443423', 'gumulung', '2026-05-16 13:21:38', 24999000.00, 'ewallet', 'DANA', 'completed', NULL),
-(7, 5, 'Customer', '1232412442', 'afgafg', '2026-05-16 13:30:54', 28499000.00, 'ewallet', 'GOPAY', 'completed', NULL),
-(8, 5, 'Customer', '123123123213', 'fadsfad', '2026-05-16 13:52:16', 35000000.00, 'cod', '', 'shipping', NULL),
-(9, 4, 'dimas', '1323123123123', 'afasdfadfadfadfawdf', '2026-05-16 13:54:36', 25000000.00, 'transfer', 'BRI', 'shipping', NULL),
-(10, 4, 'dimas', '08961809701', 'fffsfsdfdf', '2026-05-20 01:55:01', 24999000.00, 'transfer', 'BCA', 'completed', NULL),
-(11, 7, 'dimaskasep', '089678989789', 'blok pahing', '2026-05-28 15:27:55', 101297000.00, 'transfer', 'BCA (87384787455434)', 'completed', NULL),
-(12, 7, 'dimaskasep', '089678989789', 'blok pahing', '2026-05-29 01:50:15', 25000000.00, 'ewallet', 'OVO (0897-2382-4124)', 'completed', NULL),
-(13, 7, 'dimaskasep', '089678989789', 'blok pahing', '2026-06-02 14:00:05', 35000000.00, 'ewallet', 'OVO (0897-2382-4124)', 'cancelled', NULL),
-(14, 4, 'dimas', '08977233432', 'desa munjul', '2026-06-04 12:54:15', 28499000.00, 'cod', '', 'cancelled', NULL),
-(15, 7, 'dimaskasep', '089678989789', 'blok pahing', '2026-06-12 05:54:37', 28499000.00, 'cod', '', 'cancelled', NULL),
-(16, 7, 'dimaskasep', '089678989789', 'blok pahing', '2026-06-12 06:00:36', 28499000.00, 'cod', '', 'cancelled', NULL),
-(17, 4, 'dimas', '089678989789', 'desa citemu', '2026-06-12 06:07:53', 28499000.00, 'transfer', 'BRI (2542523535)', 'processed', NULL),
-(18, 7, 'dimaskasep', '089678989789', 'blok pahing', '2026-06-12 07:08:35', 22000000.00, 'cod', '', 'processed', NULL);
+(3, 3, 'dimas', '08961809701', 'munjul', '2026-05-14 08:33:36', 25000000.00, 'cod', '', 'completed', NULL);
 
 -- --------------------------------------------------------
 
@@ -158,25 +144,7 @@ CREATE TABLE `order_items` (
 INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `price`) VALUES
 (1, 1, 1, 1, 24999000.00),
 (2, 2, 1, 1, 24999000.00),
-(3, 3, 4, 1, 25000000.00),
-(4, 4, 1, 1, 24999000.00),
-(5, 5, 2, 1, 28499000.00),
-(6, 6, 1, 1, 24999000.00),
-(7, 7, 2, 1, 28499000.00),
-(8, 8, 5, 1, 35000000.00),
-(9, 9, 4, 1, 25000000.00),
-(10, 10, 1, 1, 24999000.00),
-(11, 11, 2, 1, 28499000.00),
-(12, 11, 1, 1, 24999000.00),
-(13, 11, 4, 1, 25000000.00),
-(14, 11, 3, 1, 22799000.00),
-(15, 12, 4, 1, 25000000.00),
-(16, 13, 5, 1, 35000000.00),
-(17, 14, 2, 1, 28499000.00),
-(18, 15, 2, 1, 28499000.00),
-(19, 16, 2, 1, 28499000.00),
-(20, 17, 2, 1, 28499000.00),
-(21, 18, 6, 1, 22000000.00);
+(3, 3, 4, 1, 25000000.00);
 
 -- --------------------------------------------------------
 
@@ -366,11 +334,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `image`, `phone`, `address`, `password`, `fullname`, `role`, `created_at`) VALUES
 (1, 'admin', NULL, NULL, NULL, NULL, '$2y$10$Im3KM6NrTcrIbNwzn4XyM.yYWFQClY2sAmtRSIJdda5j6JgJS1.oS', 'Administrator', 'admin', '2026-05-14 05:53:53'),
 (2, 'kasir', 'kasir@kasir.com', NULL, NULL, NULL, '$2y$10$1bsxPWFeUO0V29pkDWEar.hjOfN3b0XftWDrEhzKanhkcgf0gtjg2', 'Cashier User', 'kasir', '2026-05-14 05:53:53'),
-(3, 'customer', 'customer@customer.com', NULL, NULL, NULL, '$2y$10$feTwtD3eKMh98YmFX2cm9Ob60lN2jZ9FTrUBP/jn4sKqkvqOZ6IXy', 'Customer User', 'customer', '2026-05-14 05:53:53'),
-(4, 'dimas', 'dimasaja@gmail.com', 'avatar_4_1780575758.jpeg', '', '', '$2y$10$ilqsz41eUhxDeoOOSeYcwO5xQ82OvY/.GTWouE7s4Zfrs6miSy/ZO', 'dimas', 'customer', '2026-05-14 11:30:08'),
-(5, 'akbar', 'akbar@gmail.com', NULL, NULL, NULL, '$2y$10$Yf3h5rIxvB/z3QhDud3esuts5rDNVJQYLHadqjvXWWKAR97X5F9i.', 'Akbar', 'customer', '2026-05-15 08:11:01'),
-(6, 'rizqi', 'rizqi@gmail.com', NULL, '089782392839', 'desa munjul', '$2y$10$056T2mTnufFKddyWNBoZBumxuh9IyLxk9qzz0tYg9A3oj4PKkTDa6', 'rizqi akbar', 'customer', '2026-05-28 14:08:23'),
-(7, 'kasep', 'dimasakbar@gmail.com', 'avatar_7_1779979218.jpeg', '089678989789', 'blok pahing', '$2y$10$Xps24e4BUzDPs1DyggeJQenDOzFQLp87UW0ooFnTWRJi5r6GoeARO', 'dimaskasep', 'customer', '2026-05-28 14:17:32');
+(3, 'customer', 'customer@customer.com', NULL, NULL, NULL, '$2y$10$feTwtD3eKMh98YmFX2cm9Ob60lN2jZ9FTrUBP/jn4sKqkvqOZ6IXy', 'Customer User', 'customer', '2026-05-14 05:53:53');
 
 --
 -- Indexes for dumped tables
