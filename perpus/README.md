@@ -38,11 +38,12 @@ Aplikasi web Sistem Informasi Manajemen Perpustakaan berbasis **CodeIgniter 3** 
 
 ## 🚀 Panduan Instalasi & Penggunaan
 
-### 1. Clone atau Gunakan Template Ini
+### 1. Dapatkan Template Ini
+Template ini merupakan bagian dari repositori kumpulan [**Template-Project**](https://github.com/kanjengdmas/Template-Project). Anda dapat meng-clone repositori utama:
 ```bash
-git clone https://github.com/kanjengdmas/Template-Project.git perpus
+git clone https://github.com/kanjengdmas/Template-Project.git
 ```
-Pindahkan atau letakkan folder proyek ini ke direktori web server Anda, contohnya:
+Kemudian salin atau gunakan folder `perpus/` di direktori web server lokal Anda, contohnya:
 - XAMPP: `C:/xampp/htdocs/perpus`
 - Laragon: `C:/laragon/www/perpus`
 - Linux: `/var/www/html/perpus`
