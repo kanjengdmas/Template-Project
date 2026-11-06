@@ -1,0 +1,57 @@
+/* Custom premium style adjustments for the table card */
+.table-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+}
+
+.table-custom {
+    margin-bottom: 0;
+}
+
+.table-custom thead th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.75px;
+    border-bottom: 2px solid #edf2f7;
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+}
+
+.table-custom tbody td {
+    padding: 1.1rem 1.25rem;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.table-custom tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Soft status badges */
+.badge-soft {
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.4em 0.8em;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.badge-soft-primary { background-color: #e0e7ff; color: #4338ca; }
+.badge-soft-success { background-color: #d1fae5; color: #065f46; }
+.badge-soft-danger { background-color: #fee2e2; color: #991b1b; }
+.badge-soft-warning { background-color: #fef3c7; color: #92400e; }
+.badge-soft-secondary { background-color: #f1f5f9; color: #475569; }

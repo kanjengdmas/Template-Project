@@ -9,6 +9,7 @@ Selamat datang di repositori **Template-Project**! Repositori ini berfungsi seba
 | No | Folder | Nama Template Proyek | Tech Stack | Keterangan & Fitur Utama |
 | :---: | :--- | :--- | :--- | :--- |
 | 1 | [`perpus/`](./perpus/) | **Sistem Informasi Perpustakaan** | CodeIgniter 3, MySQL, Bootstrap (SB Admin 2) | Sistem manajemen perpustakaan lengkap: login multi-role (Admin & Anggota), manajemen buku & kategori, transaksi peminjaman & pengembalian, riwayat sirkulasi, proteksi brute force login, dan dynamic `base_url`. |
+| 2 | [`peminjam-alat/`](./peminjam-alat/) | **Sipanja - Sistem Peminjaman Alat** | CodeIgniter 3, MySQL, Bootstrap, Chart.js | Sistem manajemen peminjaman alat & inventaris: landing page interaktif, login multi-role (Admin, Petugas, Peminjam), manajemen alat & kategori, persetujuan peminjaman, pengembalian & denda kerusakan, laporan, serta dynamic `base_url`. |
 
 > 💡 *Template proyek lainnya akan terus ditambahkan secara bertahap.*
 

@@ -1,0 +1,228 @@
+:root {
+    --primary-blue: #0A3FD6;
+    --dark-blue: #062B9A;
+    --sidebar-gradient: linear-gradient(180deg, #0F4CFF 0%, #0A3FD6 50%, #062B9A 100%);
+    --sidebar-gradient-horizontal: linear-gradient(135deg, #0F4CFF 0%, #0A3FD6 50%, #062B9A 100%);
+}
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+/* Utility Colors */
+.text-primary-custom { color: var(--primary-blue) !important; }
+.bg-primary-custom { background: var(--sidebar-gradient-horizontal) !important; color: white; }
+.btn-primary-custom { background-color: var(--primary-blue); color: white; border: none; }
+.btn-primary-custom:hover { background-color: var(--dark-blue); color: white; }
+.btn-outline-primary-custom { border: 2px solid var(--primary-blue); color: var(--primary-blue); background: transparent; }
+.btn-outline-primary-custom:hover { background-color: var(--primary-blue); color: white; }
+
+.hero { 
+    background: var(--sidebar-gradient-horizontal); 
+    color: white; 
+    padding: 140px 0 100px; 
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+.navbar {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.navbar-brand {
+    font-size: 24px;
+}
+.nav-link {
+    color: #475569 !important;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-blue) !important;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    background: white;
+}
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Fitur Box */
+.feature-icon-box {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.bg-light-blue { background-color: rgba(10, 63, 214, 0.1); color: var(--primary-blue); }
+
+/* Timeline style - Used on Blue Background */
+.timeline-container { position: relative; }
+.timeline-step { text-align: center; position: relative; z-index: 1; }
+.timeline-number {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+}
+.timeline-arrow {
+    position: absolute;
+    top: 25px;
+    right: -15%;
+    width: 30%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+}
+@media (max-width: 991px) {
+    .timeline-arrow { display: none; }
+    .timeline-step { margin-bottom: 30px; }
+}
+
+/* Popular Badges */
+.popular-badge {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.badge-gold { background-color: #fef3c7; color: #d97706; }
+.badge-silver { background-color: #f1f5f9; color: #475569; }
+.badge-bronze { background-color: #ffedd5; color: #c2410c; }
+
+/* FAQ */
+.faq-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+.faq-accordion .accordion-button {
+    font-weight: 600;
+    color: #1e293b;
+    padding: 20px;
+    background: transparent;
+}
+.faq-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(10, 63, 214, 0.05);
+    color: var(--primary-blue);
+    box-shadow: none;
+}
+
+/* Sections with Blue Gradient */
+.bg-blue-gradient {
+    background: var(--sidebar-gradient-horizontal);
+    color: white;
+}
+
+.cta-section {
+    background: var(--sidebar-gradient-horizontal);
+    color: white;
+    border-radius: 24px;
+    padding: 60px 40px;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(10, 63, 214, 0.2);
+}
+
+.progress { height: 8px; border-radius: 4px; background-color: #e2e8f0; }
+
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+}
+footer a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: white; }
+
+/* Scroll Progress Bar */
+#scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #60a5fa, #3b82f6, #0a3fd6);
+    width: 0%;
+    z-index: 99999;
+    transition: width 0.1s ease-out;
+}
+
+/* Typed.js Cursor */
+.typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    color: #ffd700;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Scroll Animation classes (simplified AOS) */
+.fade-up-scroll {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-up-scroll.appeared {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Hover Card Alat */
+.card-custom {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-custom:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 22px 45px rgba(10, 63, 214, 0.12) !important;
+    border-color: rgba(10, 63, 214, 0.25) !important;
+}
+.card-custom .card-img-top {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-custom:hover .card-img-top {
+    transform: scale(1.05) !important;
+}
+
+/* FAQ accordion custom arrow hover/active effects */
+.faq-accordion .accordion-button {
+    transition: background-color 0.2s, color 0.2s;
+}
+.faq-accordion .accordion-button:hover {
+    background-color: rgba(10, 63, 214, 0.02);
+}

@@ -1,0 +1,219 @@
+.alat-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.alat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.alat-card:hover .card-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.badge-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #0a3fd6;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
+.badge-soft {
+    font-weight: 600;
+    font-size: 0.72rem;
+    padding: 0.4em 0.8em;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.badge-soft-success { background-color: #d1fae5; color: #065f46; }
+.badge-soft-danger { background-color: #fee2e2; color: #991b1b; }
+.badge-soft-warning { background-color: #fef3c7; color: #92400e; }
+
+.btn-pinjam-premium {
+    background: linear-gradient(135deg, #0a3fd6 0%, #0830a8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.65rem 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(10, 63, 214, 0.15);
+}
+
+.btn-pinjam-premium:hover {
+    background: linear-gradient(135deg, #0d48f2 0%, #0a35bd 100%);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(10, 63, 214, 0.25);
+}
+
+/* Category pill styles */
+.btn-category {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    border: none;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+.btn-category:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+.btn-category.active {
+    background-color: #0a3fd6;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(10, 63, 214, 0.2);
+}
+
+.form-control-premium {
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #cbd5e1;
+    font-size: 0.85rem;
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+}
+.form-control-premium:focus {
+    background-color: #ffffff;
+    border-color: #0a3fd6;
+    box-shadow: 0 0 0 3px rgba(10, 63, 214, 0.1);
+    outline: none;
+}
+
+/* List View styles */
+.alat-list-view .alat-item-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+}
+
+.alat-list-view .alat-card {
+    flex-direction: row;
+    height: auto !important;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+}
+
+.alat-list-view .card-img-wrapper {
+    width: 100px;
+    height: 75px;
+    border-radius: 10px;
+    margin-right: 1.25rem;
+    flex-shrink: 0;
+}
+
+.alat-list-view .badge-category {
+    display: none;
+}
+
+.alat-list-view .card-body {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.alat-list-view .alat-body-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.alat-list-view .alat-title-wrapper {
+    flex: 1;
+}
+
+.alat-list-view .alat-title-wrapper h5 {
+    min-height: auto !important;
+    margin-bottom: 0 !important;
+}
+
+.alat-list-view .alat-info-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.alat-list-view .btn-pinjam-premium {
+    width: auto !important;
+    margin-top: 0 !important;
+    padding: 0.5rem 1.2rem;
+}
+
+/* Responsive adjustments for List View */
+@media (max-width: 768px) {
+    .alat-list-view .alat-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+    .alat-list-view .card-img-wrapper {
+        width: 100%;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .alat-list-view .card-body {
+        flex-direction: column !important;
+    }
+    .alat-list-view .alat-body-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .alat-list-view .alat-info-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+    .alat-list-view .btn-pinjam-premium {
+        width: 100% !important;
+    }
+}
