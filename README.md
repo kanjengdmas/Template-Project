@@ -10,6 +10,8 @@ Selamat datang di repositori **Template-Project**! Repositori ini berfungsi seba
 | :---: | :--- | :--- | :--- | :--- |
 | 1 | [`perpus/`](./perpus/) | **Sistem Informasi Perpustakaan** | CodeIgniter 3, MySQL, Bootstrap (SB Admin 2) | Sistem manajemen perpustakaan lengkap: login multi-role (Admin & Anggota), manajemen buku & kategori, transaksi peminjaman & pengembalian, riwayat sirkulasi, proteksi brute force login, dan dynamic `base_url`. |
 | 2 | [`peminjam-alat/`](./peminjam-alat/) | **Sipanja - Sistem Peminjaman Alat** | CodeIgniter 3, MySQL, Bootstrap, Chart.js | Sistem manajemen peminjaman alat & inventaris: landing page interaktif, login multi-role (Admin, Petugas, Peminjam), manajemen alat & kategori, persetujuan peminjaman, pengembalian & denda kerusakan, laporan, serta dynamic `base_url`. |
+| 3 | [`klinik/`](./klinik/) | **Sistem Informasi Klinik & Rekam Medis** | CodeIgniter 3, MySQL, Bootstrap (SB Admin 2) | Layanan kesehatan digital multi-role (Admin, Petugas, Dokter, Pasien): pendaftaran pasien, antrian & pemeriksaan klinis, e-prescribing / resep obat digital, rekam medis terpadu, proteksi brute force login, dan dynamic `base_url`. |
+| 4 | [`toko-online/`](./toko-online/) | **Toko Online & Kasir POS E-Commerce** | CodeIgniter 3, MySQL, Bootstrap | Aplikasi e-commerce dan kasir POS lengkap: multi-role (Admin, Kasir, Customer), etalase katalog produk & keranjang belanja, checkout & upload bukti transfer, transaksi POS kasir, manajemen stok & activity logs, laporan penjualan, serta dynamic `base_url`. |
 
 > 💡 *Template proyek lainnya akan terus ditambahkan secara bertahap.*
 

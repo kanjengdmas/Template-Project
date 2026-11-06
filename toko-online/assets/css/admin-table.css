@@ -1,0 +1,58 @@
+.card-dark {
+    background: #1a1c23;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+.table-container {
+    max-height: 600px;
+    overflow-y: auto;
+    border-radius: 10px;
+    background: #1a1c23;
+}
+.table-dark-custom {
+    color: #e2e8f0;
+    margin-bottom: 0;
+}
+.table-dark-custom thead th {
+    position: sticky;
+    top: 0;
+    background: #24262d !important;
+    color: #4ade80 !important; /* Emerald Accent */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border: none !important;
+    z-index: 10;
+    padding: 15px;
+}
+.table-dark-custom tbody td {
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    vertical-align: middle;
+    padding: 12px 15px;
+    background: #1a1c23;
+}
+.table-dark-custom tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+/* Custom Scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.table-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+.table-container::-webkit-scrollbar-thumb {
+    background: rgba(74, 222, 128, 0.2);
+    border-radius: 10px;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(74, 222, 128, 0.5);
+}
+.badge-status {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}

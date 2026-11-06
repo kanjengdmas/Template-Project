@@ -1,0 +1,85 @@
+.profile-header-bg {
+    background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+    height: 120px;
+    border-top-left-radius: .35rem;
+    border-top-right-radius: .35rem;
+}
+.profile-avatar-wrapper {
+    margin-top: -75px;
+    position: relative;
+}
+.profile-avatar-wrapper img {
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.profile-avatar-wrapper img:hover {
+    transform: scale(1.03);
+}
+.avatar-upload-btn {
+    position: absolute;
+    bottom: 5px;
+    right: calc(50% - 70px);
+    width: 42px;
+    height: 42px;
+    background: #0284c7;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+.avatar-upload-btn:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+.avatar-upload-btn input[type="file"] {
+    display: none;
+}
+.info-card-item {
+    border-left: 3px solid #cbd5e1;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+.info-card-item.active {
+    border-left-color: #0284c7;
+}
+.form-section-title {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-control:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+.input-group-text {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+.btn-save-profile {
+    background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.2);
+    transition: all 0.3s ease;
+}
+.btn-save-profile:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.3);
+}

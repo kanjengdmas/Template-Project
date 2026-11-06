@@ -1,0 +1,337 @@
+/* Poppins Local Font Loading */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter Local Font Loading */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B1D1B;
+  color: #E8F1EF;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1D1B;
+}
+::-webkit-scrollbar-thumb {
+  background: #12352F;
+  border-radius: 10px;
+  border: 2px solid #0B1D1B;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1F8A70;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Rotating subtle effect */
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+
+/* Light Glassmorphism */
+.glass {
+  background: rgba(18, 53, 47, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 241, 239, 0.05);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(18, 53, 47, 0.4), rgba(11, 29, 27, 0.4));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(31, 138, 112, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(31, 138, 112, 0.6);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(31, 138, 112, 0.25);
+}
+
+.glass-navbar {
+  background: rgba(11, 29, 27, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(31, 138, 112, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Reveal on Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.reveal-slow {
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Directional Modifiers */
+.reveal.reveal-left {
+  transform: translateX(-60px);
+}
+.reveal.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal.active,
+.reveal.reveal-left.active,
+.reveal.reveal-right.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Glow Effects */
+.btn-gold-glow {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+.btn-gold-glow:hover {
+  box-shadow: 0 4px 25px rgba(212, 175, 55, 0.5);
+  transform: scale(1.02);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(31, 138, 112, 0.4);
+}
+
+.glow-hover-emerald {
+  transition: all 0.3s ease;
+}
+.glow-hover-emerald:hover {
+  box-shadow: 0 0 25px rgba(31, 138, 112, 0.5);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Ambient Glow Background Shapes */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Custom utilities for gold text clipping */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FDF0CD 0%, #D4AF37 50%, #AA8924 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #E8F1EF 0%, #1F8A70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- BRAND MARQUEE (AUTO SCROLL) --- */
+@keyframes infinite-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+  width: max-content;
+}
+
+/* Pause marquee on hover for premium user interaction */
+.marquee-container:hover .animate-infinite-scroll {
+  animation-play-state: paused;
+}
+
+/* --- ACCORDION FAQ STYLING --- */
+.faq-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+.faq-accordion-item.active .faq-accordion-content {
+  max-height: 400px; /* dynamic limit */
+  opacity: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.faq-accordion-icon {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-accordion-item.active .faq-accordion-icon {
+  transform: rotate(180deg);
+  color: #D4AF37;
+}
+.faq-accordion-item {
+  transition: all 0.3s ease;
+}
+.faq-accordion-item.active {
+  border-color: rgba(212, 175, 55, 0.3);
+  background: rgba(18, 53, 47, 0.4);
+}
+
+/* --- PARALLAX UTILITY --- */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* --- DEVICE MOCKUP CONTAINER --- */
+.perspective-frame {
+  perspective: 1200px;
+}
+.device-mockup-frame {
+  transform: rotateY(-10deg) rotateX(5deg);
+  border: 8px solid #12352F;
+  box-shadow: 
+    -20px 20px 50px rgba(0,0,0,0.8), 
+    0 0 30px rgba(31, 138, 112, 0.3);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.perspective-frame:hover .device-mockup-frame {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.6), 
+    0 0 50px rgba(31, 138, 112, 0.5);
+}
+
+/* Smooth gradient background for statistics section */
+.bg-stat-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(31, 138, 112, 0.08) 0%, transparent 70%);
+}
+
+/* --- TYPING CURSOR BLINK --- */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: #D4AF37;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: cursor-blink 0.8s steps(1) infinite;
+}
+@keyframes cursor-blink {
+  50% { opacity: 0; }
+}
+
+/* Glow Cursor Effect */
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(31, 138, 112, 0.15), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1; /* Make sure it stays visible above backgrounds but behind interactive content */
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+  pointer-events: none;
+}
+
+

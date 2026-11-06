@@ -1,0 +1,46 @@
+.btn-delete-card {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #cbd5e1;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-delete-card:hover {
+    background-color: #fee2e2;
+    color: #ef4444;
+    transform: rotate(90deg);
+    text-decoration: none;
+}
+.history-card {
+    transition: all 0.3s ease;
+    border: none;
+}
+.history-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08) !important;
+}
+.history-card-header {
+    border-bottom: 1px solid #f1f5f9;
+    background-color: #ffffff;
+    padding-right: 45px; /* Prevent text overlap with delete button */
+}
+.border-left-custom-warning {
+    border-left: 3px solid #f59e0b;
+}
+.border-left-custom-success {
+    border-left: 3px solid #10b981;
+}
+.border-left-custom-info {
+    border-left: 3px solid #06b6d4;
+}
